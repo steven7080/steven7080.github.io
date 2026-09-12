@@ -3,164 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="서울대학교 첨단융합학부 정시 합격생 정태영의 개인 홈페이지"
-    />
+    <meta name="description" content="서울대학교 첨단융합학부 정시 합격생 정태영의 개인 홈페이지" />
     <title>정태영 | 개인 홈페이지</title>
     <style>
-      :root {
-        --ink: #252a33;
-        --muted: #667085;
-        --paper: #ffffff;
-        --canvas: #dff3ff;
-        --line: #e6eaf0;
-        --accent: #315bd6;
-        --accent-soft: #e9efff;
-      }
-
-      * { box-sizing: border-box; }
-
-      html { scroll-behavior: smooth; }
-
-      body {
-        margin: 0;
-        color: var(--ink);
-        background: var(--canvas);
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        line-height: 1.7;
-      }
-
-      a { color: inherit; }
-
-      .wrap {
-        width: min(100% - 40px, 960px);
-        margin: 0 auto;
-      }
-
-      header {
-        padding: 20px 0;
-        background: rgba(223, 243, 255, 0.92);
-        border-bottom: 1px solid var(--line);
-        position: sticky;
-        top: 0;
-        backdrop-filter: blur(10px);
-        z-index: 1;
-      }
-
-      .nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-      }
-
-      .brand { font-weight: 800; text-decoration: none; letter-spacing: -0.03em; }
-
-      nav { display: flex; gap: 18px; }
-      nav a { color: var(--muted); font-size: 0.92rem; text-decoration: none; }
-      nav a:hover { color: var(--accent); }
-
-      main { padding: 62px 0 48px; }
-
-      .hero {
-        padding: 48px;
-        background: var(--paper);
-        border: 1px solid var(--line);
-        border-radius: 24px;
-        box-shadow: 0 16px 38px rgba(22, 32, 51, 0.06);
-      }
-
-      .eyebrow {
-        margin: 0 0 12px;
-        color: var(--accent);
-        font-size: 0.9rem;
-        font-weight: 800;
-        letter-spacing: 0.07em;
-      }
-
-      h1, h2, p { margin-top: 0; }
-      h1 { margin-bottom: 18px; font-size: clamp(2.35rem, 7vw, 4.7rem); line-height: 1.08; letter-spacing: -0.065em; }
-      .lead { max-width: 640px; margin-bottom: 28px; color: var(--muted); font-size: clamp(1.05rem, 2.5vw, 1.22rem); }
-
-      .button {
-        display: inline-block;
-        padding: 11px 18px;
-        border-radius: 10px;
-        color: #fff;
-        background: var(--accent);
-        font-weight: 700;
-        text-decoration: none;
-      }
-      .button:hover { background: #264cbd; }
-
-      .sections { display: grid; gap: 18px; margin-top: 22px; }
-      .card { padding: 30px; background: var(--paper); border: 1px solid var(--line); border-radius: 18px; }
-      h2 { margin-bottom: 12px; font-size: 1.3rem; letter-spacing: -0.035em; }
-      .card p { margin-bottom: 0; color: var(--muted); }
-
-      .tags { display: flex; flex-wrap: wrap; gap: 9px; margin: 18px 0 0; padding: 0; list-style: none; }
-      .tags li { padding: 7px 12px; color: #29478f; background: var(--accent-soft); border-radius: 999px; font-size: 0.92rem; font-weight: 650; }
-
-      .contact-link { color: var(--accent); font-weight: 750; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-      footer { padding: 0 0 36px; color: var(--muted); font-size: 0.88rem; text-align: center; }
-
-      @media (max-width: 560px) {
-        .wrap { width: min(100% - 28px, 960px); }
-        header { padding: 15px 0; }
-        nav { gap: 12px; }
-        nav a { font-size: 0.82rem; }
-        main { padding-top: 30px; }
-        .hero { padding: 32px 24px; border-radius: 18px; }
-        .card { padding: 24px; }
-      }
+      :root { --blue:#0066cc; --blue-dark:#2997ff; --ink:#1d1d1f; --muted:#7a7a7a; --white:#fff; --parchment:#f5f5f7; --dark:#272729; --dark-2:#2a2a2c; }
+      * { box-sizing:border-box; }
+      html { scroll-behavior:smooth; }
+      body { margin:0; background:var(--white); color:var(--ink); font-family:"SF Pro Text",system-ui,-apple-system,BlinkMacSystemFont,sans-serif; font-size:17px; font-weight:400; letter-spacing:-.374px; line-height:1.47; }
+      a { color:inherit; }
+      .global-nav { height:44px; background:#000; color:var(--white); }
+      .nav-inner,.sub-nav-inner { display:flex; align-items:center; justify-content:space-between; width:min(100% - 40px,980px); height:100%; margin:0 auto; }
+      .nav-name,.global-nav a { color:var(--white); font-size:12px; font-weight:400; letter-spacing:-.12px; text-decoration:none; }
+      .nav-name { font-size:14px; font-weight:600; }
+      .nav-links { display:flex; align-items:center; gap:24px; }
+      .sub-nav { position:sticky; top:0; z-index:5; height:52px; background:rgba(245,245,247,.8); border-bottom:1px solid rgba(0,0,0,.08); backdrop-filter:saturate(180%) blur(20px); }
+      .sub-nav strong { font-family:"SF Pro Display",system-ui,-apple-system,sans-serif; font-size:21px; font-weight:600; letter-spacing:.231px; }
+      .sub-links { display:flex; align-items:center; gap:20px; }
+      .sub-links a { color:var(--ink); font-size:14px; text-decoration:none; }
+      .pill { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:11px 22px; border:0; border-radius:9999px; background:var(--blue); color:var(--white); font:inherit; text-decoration:none; transition:transform 140ms ease; }
+      .pill:active { transform:scale(.95); }
+      .pill:focus-visible { outline:2px solid #0071e3; outline-offset:3px; }
+      .pill-outline { background:transparent; border:1px solid var(--blue); color:var(--blue); }
+      .tile { display:grid; place-items:center; min-height:620px; padding:80px 20px; text-align:center; }
+      .tile-white { background:var(--white); } .tile-parchment { background:var(--parchment); } .tile-dark { background:var(--dark); color:var(--white); } .tile-dark-2 { background:var(--dark-2); color:var(--white); }
+      .tile-inner { width:min(100%,980px); } .tile-copy { max-width:760px; margin:0 auto; }
+      h1,h2,p { margin-top:0; }
+      h1,h2 { font-family:"SF Pro Display",system-ui,-apple-system,BlinkMacSystemFont,sans-serif; font-weight:600; letter-spacing:-.28px; }
+      h1 { margin-bottom:16px; font-size:clamp(40px,5vw,56px); line-height:1.07; } h2 { margin-bottom:12px; font-size:clamp(34px,4vw,40px); line-height:1.1; }
+      .lead { margin-bottom:24px; font-family:"SF Pro Display",system-ui,-apple-system,BlinkMacSystemFont,sans-serif; font-size:clamp(21px,2.6vw,28px); font-weight:400; letter-spacing:.196px; line-height:1.14; }
+      .body-copy { max-width:650px; margin:0 auto 26px; } .dark-copy { color:#ccc; }
+      .actions { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; } .dark-link { color:var(--blue-dark); text-decoration:none; }
+      .hero-layout { display:grid; grid-template-columns:minmax(0,1fr) minmax(260px,360px); align-items:center; gap:64px; text-align:left; }
+      .hero-layout .tile-copy { margin:0; } .hero-layout .actions { justify-content:flex-start; }
+      .hero-portrait { display:block; width:min(100%,360px); aspect-ratio:4 / 5; object-fit:cover; object-position:center top; box-shadow:rgba(0,0,0,.22) 3px 5px 30px; }
+      .interest-list { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; max-width:900px; margin:48px auto 0; background:rgba(255,255,255,.18); }
+      .interest-list span { padding:24px 16px; background:var(--dark); color:var(--white); font-size:17px; font-weight:600; }
+      footer { padding:64px 20px 28px; background:var(--parchment); color:#333; font-size:12px; letter-spacing:-.12px; }
+      .footer-inner { width:min(100%,980px); margin:0 auto; } .footer-links { display:flex; flex-wrap:wrap; gap:12px 28px; margin-bottom:32px; } .footer-links a { color:#333; text-decoration:none; } .copyright { color:var(--muted); }
+      @media (max-width:734px) { .nav-inner,.sub-nav-inner { width:min(100% - 28px,980px); } .nav-links a:not(:last-child),.sub-links a { display:none; } .tile { min-height:auto; padding:64px 20px; } .hero-layout { grid-template-columns:1fr; gap:40px; text-align:center; } .hero-layout .tile-copy { margin:0 auto; } .hero-layout .actions { justify-content:center; } .hero-portrait { width:min(80%,320px); margin:0 auto; order:-1; } .interest-list { grid-template-columns:repeat(2,1fr); margin-top:36px; } }
+      @media (max-width:419px) { .tile { padding:48px 18px; } h1 { font-size:28px; } h2 { font-size:30px; } .lead { font-size:20px; } .pill { padding:10px 18px; } }
     </style>
   </head>
   <body>
     <header>
-      <div class="wrap nav">
-        <a class="brand" href="#top">정태영</a>
-        <nav aria-label="페이지 탐색">
-          <a href="#about">소개</a>
-          <a href="#interests">관심사</a>
-          <a href="#contact">연락처</a>
-        </nav>
-      </div>
+      <div class="global-nav"><div class="nav-inner"><a class="nav-name" href="#top">정태영</a><nav class="nav-links" aria-label="주요 탐색"><a href="#about">소개</a><a href="#interests">관심사</a><a href="#contact">연락처</a></nav></div></div>
+      <div class="sub-nav"><div class="sub-nav-inner"><strong>정태영</strong><div class="sub-links"><a href="#about">About</a><a href="#interests">Interests</a><a class="pill" href="#contact">연락하기</a></div></div></div>
     </header>
-
-    <main id="top" class="wrap">
-      <section class="hero" aria-labelledby="intro-title">
-        <p class="eyebrow">WELCOME</p>
-        <h1 id="intro-title">안녕하세요,<br />정태영입니다.</h1>
-        <p class="lead">서울대학교 첨단융합학부 정시 합격생, 2006년생 정태영의 개인 홈페이지입니다.</p>
-        <a class="button" href="#about">더 알아보기</a>
-      </section>
-
-      <div class="sections">
-        <section id="about" class="card" aria-labelledby="about-title">
-          <h2 id="about-title">소개</h2>
-          <p>안농! 저는 서울대학교 첨단융합학부에 정시로 합격한 정태영입니다. 새로운 분야를 배우고, 여러 사람과 함께 가능성을 넓혀 가는 일을 좋아합니다.</p>
-        </section>
-
-        <section id="interests" class="card" aria-labelledby="interests-title">
-          <h2 id="interests-title">관심사</h2>
-          <p>앞으로 더 깊이 탐구하고 싶은 분야들입니다.</p>
-          <ul class="tags">
-            <li>첨단 기술</li>
-            <li>융합 학문</li>
-            <li>새로운 배움</li>
-            <li>함께하는 프로젝트</li>
-          </ul>
-        </section>
-
-        <section id="contact" class="card" aria-labelledby="contact-title">
-          <h2 id="contact-title">연락처</h2>
-          <p>GitHub에서 제 작업을 확인하거나 메시지를 남겨 주세요.</p>
-          <p><a class="contact-link" href="https://github.com/steven7080" target="_blank" rel="noreferrer">github.com/steven7080 ↗</a></p>
-        </section>
-      </div>
+    <main id="top">
+      <section class="tile tile-white" aria-labelledby="intro-title"><div class="tile-inner hero-layout"><div class="tile-copy"><h1 id="intro-title">안녕하세요,<br />정태영입니다.</h1><p class="lead">서울대학교 첨단융합학부<br />정시 합격생.</p><div class="actions"><a class="pill" href="#about">더 알아보기</a><a class="pill pill-outline" href="#contact">연락처</a></div></div><img class="hero-portrait" src="assets/profile.jpg" alt="정태영 프로필 사진" /></div></section>
+      <section id="about" class="tile tile-parchment" aria-labelledby="about-title"><div class="tile-inner tile-copy"><h2 id="about-title">새로운 가능성을<br />배웁니다.</h2><p class="lead">2006년생, 정태영입니다.</p><p class="body-copy">안농! 서울대학교 첨단융합학부에 정시로 합격했습니다. 새로운 분야를 배우고, 서로 다른 생각을 연결해 더 넓은 가능성을 만들어 가는 일을 좋아합니다.</p><a class="pill" href="#interests">관심사 보기</a></div></section>
+      <section id="interests" class="tile tile-dark" aria-labelledby="interests-title"><div class="tile-inner tile-copy"><h2 id="interests-title">관심사.</h2><p class="lead dark-copy">기술과 사람이 만나는 지점을 탐구합니다.</p><div class="interest-list" role="list" aria-label="관심사 목록"><span role="listitem">첨단 기술</span><span role="listitem">융합 학문</span><span role="listitem">새로운 배움</span><span role="listitem">함께하는 프로젝트</span></div></div></section>
+      <section id="contact" class="tile tile-dark-2" aria-labelledby="contact-title"><div class="tile-inner tile-copy"><h2 id="contact-title">함께 이야기해요.</h2><p class="lead dark-copy">GitHub에서 제 작업을 확인하거나 메시지를 남겨 주세요.</p><a class="dark-link" href="https://github.com/steven7080" target="_blank" rel="noreferrer">github.com/steven7080 ↗</a></div></section>
     </main>
-
-    <footer>© 2026 정태영. All rights reserved.</footer>
+    <footer><div class="footer-inner"><div class="footer-links"><a href="#about">소개</a><a href="#interests">관심사</a><a href="https://github.com/steven7080" target="_blank" rel="noreferrer">GitHub</a></div><p class="copyright">© 2026 정태영. All rights reserved.</p></div></footer>
   </body>
 </html>
